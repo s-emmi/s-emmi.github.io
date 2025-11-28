@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tilaus | Ohimaan marjatila</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">Etusivu</a></li>
+            <li><a href="order.html">Tilaus</a></li>
+            <li><a href="contact.html">Yhteystiedot</a></li>
+        </ul>
+    </nav>
+
+    <header class="small-hero">
+        <h1>Tilaus</h1>
+    </header>
+
+<main>
+    <section class="info-grid">
+        <div class="info-card">
+            <h2>Hinnasto</h2>
+            <ul>
+                <li><strong>Mansikat:</strong> 8 €/kg</li>
+                <li><strong>Vadelmat:</strong> 12 €/kg</li>
+                <li><strong>Punaherukat:</strong> 6 €/kg</li>
+                <li><strong>Mustaherukat:</strong> 7 €/kg</li>
+            </ul>
+        </div>
+
+        <div class="info-card">
+            <h2>Aukioloajat</h2>
+            <p>Ma-Pe: 9.00 - 18.00</p>
+            <p>La: 10.00 - 16.00</p>
+            <p>Su: Suljettu</p>
+        </div>
+    </section>
+
+    <section class="form-section">
+        <h2>Tilaa tuoreet marjat</h2>
+        <p>Täytä lomake ja vahvistamme tilauksesi sähköpostilla.</p>
+
+        <div id="success-message" class="success-message" style="display:none;">
+            Kiitos tilauksestasi! Saat vahvistuksen sähköpostiisi.
+        </div>
+
+        <form action="#" method="post">
+            <div class="form-row">
+                <label for="nimi">Nimi</label>
+                <input type="text" id="nimi" name="nimi" required placeholder="Etunimi Sukunimi">
+            </div>
+
+            <div class="form-row">
+                <label for="email">Sähköposti</label>
+                <input type="email" id="email" name="email" required placeholder="esimerkki@mail.com">
+            </div>
+
+            <div class="form-row">
+                <label for="puhelin">Puhelinnumero</label>
+                <input type="tel" id="puhelin" name="puhelin" required placeholder="040 000 0000">
+            </div>
+
+            <div class="form-row">
+                <label for="tuote">Tilattava tuote</label>
+                <input type="text" id="tuote" name="tuote" placeholder="Esim. 5 kg mansikoita">
+            </div>
+
+            <div class="form-row">
+                <label for="lisatiedot">Lisätiedot</label>
+                <textarea id="lisatiedot" name="lisatiedot" placeholder="Erityistoiveet..."></textarea>
+            </div>
+
+            <div class="form-buttons">
+                <input type="submit" value="Lähetä tilaus">
+                <input type="reset" value="Tyhjennä">
+            </div>
+        </form>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer-inner">
+        <p>© 2025 Ohimaan marjatila - Kaikki oikeudet pidätetään.</p>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const form = document.querySelector("form");
+        const successBox = document.getElementById("success-message");
+
+        form.addEventListener("submit", function(e) {
+            e.preventDefault();
+            form.reset();
+
+            successBox.style.display = "block";
+            successBox.style.opacity = "1";
+
+            setTimeout(() => {
+                successBox.style.opacity = "0";
+                setTimeout(() => successBox.style.display = "none", 600);
+            }, 5000);
+        });
+    });
+</script>
+
+</body>
+</html>
