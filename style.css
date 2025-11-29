@@ -208,13 +208,6 @@ a {
 
 .project-page .project-header h1 {
   font-size: 2.4rem;
-  margin-bottom: 0.5rem;
-}
-
-.project-page .project-subtitle {
-  color: var(--primary);
-  font-style: italic;
-  margin-bottom: 2rem;
 }
 
 .project-page .project-layout {
@@ -227,6 +220,7 @@ a {
 
 .project-page .project-text {
   flex: 1.2;
+  line-height: 1.4;
 }
 
 .project-page .project-text h2 {
@@ -281,7 +275,6 @@ footer {
   padding: 2rem 1rem;
   font-style: italic;
   border-top: 2px solid var(--accent);
-  margin-top: 60px;
 }
 
 

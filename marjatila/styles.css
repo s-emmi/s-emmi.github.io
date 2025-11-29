@@ -59,7 +59,7 @@ body {
 /* --- HERO FRONTPAGE --- */
 
 .hero {
-    background-image: url("images/strawberry-header.jpg");
+    background-image: url("images/strawberry-header.webp");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -125,7 +125,7 @@ body {
 /* --- SMALL HEROS (tilaus & yhteystiedot) --- */
 
 .small-hero {
-    background-image: url("images/strawberry-bushes.jpg");
+    background-image: url("images/strawberry-bushes.webp");
     background-size: cover;
     background-position: center;
     height: 30vh;
@@ -331,7 +331,7 @@ textarea {
 .footer {
     position: relative;
     padding: 50px 0;
-    background-image: url("images/strawberry-bushes.jpg");
+    background-image: url("images/strawberry-bushes.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

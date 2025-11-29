@@ -112,7 +112,7 @@ nav {
     justify-content: center;
     align-items: center;
     min-height: 75vh;
-    background-image: url(images/eggs-9.jpg);
+    background-image: url(images/eggs-9.webp);
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -162,7 +162,7 @@ nav {
 }
 
 .how-it-works-image {
-    background: url(images/cooking.jpg) center/cover no-repeat;
+    background: url(images/cooking.webp) center/cover no-repeat;
     min-height: 600px;
     width: 100%;
     border-radius: 0 15px 15px 0;
@@ -243,7 +243,7 @@ nav {
 }
 
 .recipe-ofthemonth-image {
-    background: url(images/carrot-cake.jpg) center/cover no-repeat;
+    background: url(images/carrot-cake.webp) center/cover no-repeat;
     min-height: 480px;
     border-radius: 15px 0 0 15px;
 }
