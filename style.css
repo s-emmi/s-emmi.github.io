@@ -1,0 +1,311 @@
+:root {
+  --text: #180e0e;
+  --background: #f9f5f5;
+  --primary: #a86b67;
+  --secondary: #c8beb4;
+  --accent: #aea791;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica', sans-serif;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ---- BUTTONS ---- */
+
+.button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: var(--secondary);
+  color: var(--text);
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: center;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.button:hover {
+  background: var(--accent);
+  transform: scale(1.05);
+}
+
+.button-secondary {
+  background: var(--primary);
+  color: white;
+}
+
+.button-secondary:hover {
+  background: var(--accent);
+  color: var(--text);
+}
+
+/* --- MAIN NAV --- */
+.top-nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  padding: 1rem 2rem;
+  background: var(--secondary);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.top-nav a {
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.top-nav a:hover {
+  color: var(--primary);
+}
+
+/* ---- HERO-FRONTPAGE ----*/
+
+.hero-fullpage {
+  background-image: url('images/kukkapelto.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero-fullpage header nav a {
+  color: white;
+}
+
+.hero-fullpage header nav a:hover {
+  color: var(--accent);
+}
+
+.hero-content {
+  text-align: center;
+  color: white;
+  max-width: 800px;
+  margin: auto;
+  background: rgba(0,0,0,0.3);
+  padding: 2rem;
+  border-radius: 15px;
+}
+
+.hero-content h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.hero-fullpage footer {
+  text-align: center;
+  color: white;
+  padding: 1rem;
+  font-style: italic;
+}
+
+/* ---- PROJECT CARDS (projects.html) ---- */
+
+.projects-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.projects-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 15px 28px rgba(0,0,0,0.18);
+}
+
+.project-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.06);
+}
+
+.project-info {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.project-info h2 {
+  font-size: 1.3rem;
+}
+
+.project-info p {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.project-info .button {
+  margin-top: 1rem;
+  width: fit-content;
+}
+
+.projects-page footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 1rem;
+  background: var(--secondary);
+  font-style: italic;
+}
+
+/* ---- PROJECT-PAGE (project1.html, etc.) --- */
+
+.project-page .project-header {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.project-page .project-header h1 {
+  font-size: 2.4rem;
+}
+
+.project-page .project-layout {
+  display: flex;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.project-page .project-text {
+  flex: 1.2;
+  line-height: 1.4;
+}
+
+.project-page .project-text h2 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.project-page .project-image {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.project-page .project-image img {
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* buttons in project-pages */
+.project-page .project-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.project-page .project-buttons .button {
+  flex: 1;
+}
+
+ul {
+  list-style-position: inside;
+  padding-left: 0;
+  margin: 1rem 0;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* --- FOOTER --- */
+
+footer {
+  background-color: var(--secondary);
+  color: var(--text);
+  text-align: center;
+  padding: 2rem 1rem;
+  font-style: italic;
+  border-top: 2px solid var(--accent);
+}
+
+
+
+
+/* --- RESPONSIVENESS --- */
+@media (max-width: 1024px) {
+  .projects-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .project-page .project-layout {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+
+  .project-page .project-buttons .button {
+    flex: 1 1 100%;
+  }
+}

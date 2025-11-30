@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reseptipankki</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="app.js"></script>
+</head>
+<body>
+
+<header>
+    <a href="index.html">
+        <img class="logo" src="images/logo.webp" alt="Reseptipankki logo">
+    </a>
+    <nav>
+        <button class="menu-btn" id="menu-btn" aria-label="Avaa valikko" aria-expanded="false" aria-controls="navbar">
+        ☰
+        </button>
+
+        <ul class="navbar" id="navbar">
+            <li><a href="index.html">Etusivu</a></li>
+            <li><a href="contact.html">Yhteystiedot</a></li>
+            <li><a href="login.html" class="login-button">Kirjaudu</a></li>
+            <li><a href="register.html" class="register-button">Rekisteröidy</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="fp-div">
+        <h1>Tervetuloa Reseptipankkiin!</h1>
+        <p>Löydä herkullisia reseptejä ja jaa omat suosikkisi muiden kanssa.</p>
+        <div class="fb-buttons">
+            <a href="login.html" class="button">Selaa reseptejä</a>
+        </div>
+    </section>
+
+
+    <section class="how-it-works">
+        <div class="how-it-works-image"></div>
+        <div class="how-it-works-content">
+            <h2>Miten se toimii?</h2>
+            <p>Reseptipankki on inspiroiva yhteisö kaikille ruoanlaitosta kiinnostuneille. Rekisteröitymällä palveluumme saat oman käyttäjätilin, jonka kautta voit helposti lisätä omia reseptejäsi muiden kokeiltavaksi sekä selata tuhansia muiden jakamia ruokaohjeita.</p>
+            <p>Sivustoltamme löydät laajan valikoiman reseptikategorioita, joista jokainen ruokavalio ja makumieltymys on huomioitu. Olipa kyseessä nopea arkiruoka, juhlapöydän herkut tai erikoisruokavalioihin sopivat vaihtoehdot, Reseptipankista löydät inspiraatiota jokaiseen tilanteeseen.</p>
+            <p>Palkitsemme joka kuukausi eniten suosiota keränneen reseptin tekijän, joten nyt on loistava tilaisuus jakaa parhaat luomuksesi ja ansaita mainetta yhteisössämme!</p>
+        </div>
+    </section>
+
+
+    <h2>Suositut kategoriat</h2>
+    <div class="popular-container">
+        <div class="popular-item">
+            <img class="popular-categories" src="images/pasta.webp" alt="Kasvisruokakategoria (pasta-annos)">
+            <p>Kasvisruoat</p>
+        </div>
+        <div class="popular-item">
+            <img class="popular-categories" src="images/korean.webp" alt="Korealainen keittiö kategoria (annos)">
+            <p>Korealainen keittiö</p>
+        </div>
+        <div class="popular-item">
+            <img class="popular-categories" src="images/soap.webp" alt="Keitot kategoria (nuudelikeitto-annos)">
+            <p>Keitot</p>
+        </div>
+        <div class="popular-item">
+            <img class="popular-categories" src="images/pickledsalad.webp" alt="Ruokaisat salaatit kategoria (suolakurkkusalaatti-annos)">
+            <p>Ruokaisat salaatit</p>
+        </div>
+        <div class="popular-item">
+            <img class="popular-categories" src="images/cake.webp" alt="Jälkiruokakategoria (pähkinäjuustokakku)">
+            <p>Jälkiruoat</p>
+        </div>
+    </div>
+
+
+    <h2>Suosituimmat reseptit juuri nyt</h2>
+    <div class="popular-container">
+        <div class="popular-item">
+            <img class="popular-categories" src="images/tofu.webp" alt="Tofu tacot">
+            <p>Tofu tacot</p>
+        </div>
+        <div class="popular-item">
+            <img class="popular-categories" src="images/spring-rolls.webp" alt="Kevätrullat">
+            <p>Kevätrullat</p>
+        </div>
+        <div class="popular-item">
+            <img class="popular-categories" src="images/pestopasta.webp" alt="Pestopasta">
+            <p>Pestopasta</p>
+        </div>
+        <div class="popular-item">
+            <img class="popular-categories" src="images/lemoncake.webp" alt="Sitruunakakku">
+            <p>Sitruunakakku</p>
+        </div>
+    </div>
+
+
+    <section class="recipe-ofthemonth">
+        <div class="recipe-ofthemonth-content">
+            <h3>Kuukauden resepti:</h3>
+            <h2>Porkkanakakku</h2>
+            <p><em>Tämän reseptin loihti: Kaaleppi Kakkuilija</em></p>
+            <p>Porkkanakakku on klassinen leivonnainen, joka on mehevä, mausteinen ja täynnä makua. Kakkuun lisätty kaneli ja inkivääri antavat lämpimän maun, ja raastettu porkkana tekee siitä kosteaa ja pehmeää.</p>
+        </div>
+        <div class="recipe-ofthemonth-image"></div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-div">
+        <p>Reseptipankki Oy</p>
+        <p>y-tunnus 12345-6</p>
+        <p>yhteys@reseptipankki.fi</p>
+        <p class="copyrights">© Copyrights 2025</p>
+    </div>
+</footer>
+
+</body>
+</html>
