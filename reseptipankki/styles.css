@@ -1,0 +1,348 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+h1, h2 {
+    text-align: center;
+    width: 100%;
+    font-size: 32px;
+}
+
+/*--- HEADER & NAVBAR ---*/
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em 2em;
+    background: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+    width: 220px;
+    height: auto;
+}
+
+nav {
+    position: relative;
+}
+
+.navbar {
+    display: flex;
+    gap: 1em;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: background 0.3s ease;
+}
+
+.navbar li a:hover,
+.navbar li a.active {
+    background: #ddd;
+}
+
+.login-button {
+    background: #F58B78;
+}
+.login-button:hover { background-color: #9a594e; }
+
+.register-button {
+    background: #e0a871;
+}
+.register-button:hover { background-color: #a07d4d; }
+
+/* Hamburger */
+.menu-btn {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+}
+
+/* RESPONSIVE NAV */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: #fff;
+        width: 220px;
+        display: none;
+        padding: 1rem;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        border-radius: 10px;
+    }
+
+    .navbar.open {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+}
+
+/* --- HERO --- */
+.fp-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 75vh;
+    background-image: url(images/eggs-9.webp);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.fp-div h1 {
+    margin-bottom: 5px;
+    font-size: 4rem;
+    color: white;
+}
+.fp-div p {
+    margin-bottom: 40px;
+    font-size: 1.5rem;
+    color: white;
+}
+
+/* Smaller screen hero text */
+@media (max-width: 600px) {
+    .fp-div h1 { font-size: 32px; }
+    .fp-div p { font-size: 18px; }
+}
+
+.button {
+    padding: 16px 40px;
+    background-color: #6e3b31;
+    border-radius: 30px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+.button:hover {
+    background-color: #eca599;
+    color: black;
+}
+
+/* -- HOW IT WORKS -- */
+.how-it-works {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    margin: 80px 0;
+}
+
+.how-it-works-image {
+    background: url(images/cooking.webp) center/cover no-repeat;
+    min-height: 600px;
+    width: 100%;
+    border-radius: 0 15px 15px 0;
+}
+
+.how-it-works-content {
+    padding: 40px;
+    max-width: 850px;
+}
+
+.how-it-works-content h2 {
+    font-size: 32px;
+    text-align: start;
+}
+.how-it-works-content p {
+    font-size: 18px;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+    .how-it-works {
+        grid-template-columns: 1fr;
+    }
+    .how-it-works-image {
+        border-radius: 15px;
+        height: 250px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+    .how-it-works {
+        grid-template-columns: 1fr;
+    }
+    .how-it-works-image {
+        border-radius: 15px;
+        max-height: 200px;
+    }
+}
+
+/* ---POPULAR CATEGORIES & RECIPES  -- */
+.popular-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 40px 20px;
+}
+
+.popular-item {
+    width: 260px;
+    text-align: center;
+    font-size: 1.2rem;
+    transition: transform 0.3s;
+}
+
+
+.popular-item img {
+    height: 330px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.popular-item:hover {
+    transform: scale(1.05);
+}
+
+/* --- RECIPE OF THE MONTH --- */
+.recipe-ofthemonth {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    width: 100%;
+    background-color: white;
+    margin: 80px 0;
+}
+
+.recipe-ofthemonth-image {
+    background: url(images/carrot-cake.webp) center/cover no-repeat;
+    min-height: 480px;
+    border-radius: 15px 0 0 15px;
+}
+
+.recipe-ofthemonth-content {
+    padding: 40px;
+    max-width: 800px;
+}
+
+.recipe-ofthemonth-content h2 { 
+    font-size: 32px;
+    text-align: start; 
+}
+.recipe-ofthemonth-content h3 {
+    font-size: 22px;
+    text-align: start; 
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+    .recipe-ofthemonth {
+        grid-template-columns: 1fr;
+    }
+    .recipe-ofthemonth-image {
+        border-radius: 15px;
+        height: 280px;
+    }
+}
+
+/* --- FORMS ---- */
+.inputarea {
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    background: #fff;
+}
+
+.inputarea form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.inputarea form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+#sendbutton {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    background-color: #F58B78;
+    color: #333333;
+    font-size: 16px;
+    cursor: pointer;
+}
+#sendbutton:hover {
+    background-color: #643b34;
+    color: white;
+}
+
+/* --- CONTACTBOX --- */
+.contact-box {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 50px 40px;
+    background: #fff3e0;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.op-container {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+/* --- FOOTER --- */
+.footer-div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #F58B78;
+    padding: 3rem;
+    color: #333333;
+    margin-top: 80px;
+}
+
+.copyrights {
+    font-size: 0.9rem;
+    margin-top: 1.5rem;
+}
